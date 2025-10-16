@@ -1,0 +1,24 @@
+## Install sshfs
+
+sudo apt update
+sudo apt install sshfs -y
+
+## test connestion of cluster account from local computer 
+ssh cluster@account
+
+## On your local computer create a mount 
+sudo mkdir -p /mnt/cluster_jupyter
+sudo chown $USER:$USER /mnt/cluster_jupyter
+
+## Mount remote folder locally
+sshfs ssh cluster@account:/home/shinobu-wakamiya/cluster-folder /mnt/cluster_jupyter
+
+## check mount
+ls -la /mnt/noreset
+df -h | grep noreset
+mount | grep noreset
+
+## access the mounted folder from jupyter
+import os
+
+mount_path = "/mnt/cluster_jupyter"
