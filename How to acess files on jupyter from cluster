@@ -22,3 +22,9 @@ mount | grep noreset
 import os
 
 mount_path = "/mnt/cluster_jupyter"
+
+
+## To unmount write
+umount /mnt/noreset
+or 
+fusermount -u /mnt/noreset        # common on Linux
