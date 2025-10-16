@@ -14,9 +14,9 @@ sudo chown $USER:$USER /mnt/cluster_jupyter
 sshfs ssh cluster@account:/home/shinobu-wakamiya/cluster-folder /mnt/cluster_jupyter
 
 ## check mount
-ls -la /mnt/noreset
-df -h | grep noreset
-mount | grep noreset
+ls -la /mnt/cluster_jupyter
+df -h | grep cluster_jupyter
+mount | grep cluster_jupyter
 
 ## access the mounted folder from jupyter
 import os
