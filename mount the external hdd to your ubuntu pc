@@ -1,0 +1,11 @@
+sudo mkdir /media/newhd
+
+## try to mount the external hdd and see what path it has
+## you can also type this in terminal to check the path
+df -H
+
+## If external hdd path is : dev/sda1 we write
+sudo mount /dev/sda1 /media/newhd
+
+## To unmount before plugging out type-
+sudo unmount /media/newhd
