@@ -11,7 +11,7 @@ sudo mkdir -p /mnt/cluster_jupyter
 sudo chown $USER:$USER /mnt/cluster_jupyter
 
 ## Mount remote folder locally
-sshfs ssh cluster@account:/home/shinobu-wakamiya/cluster-folder /mnt/cluster_jupyter
+sshfs cluster@account:/home/shinobu-wakamiya/cluster-folder /mnt/cluster_jupyter
 
 ## check mount
 ls -la /mnt/cluster_jupyter
